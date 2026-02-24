@@ -1,24 +1,41 @@
-const loadData = async () => {
-   const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
-   const data = await res.json();
-   searchPost(data);
+const retroForm = async () => {
+    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+    const data = await res.json();
+
+    displayRetro(data.posts); 
 }
 
-const bannerSection = document.getElementById('banner-section');
+const displayRetro = (posts) => {
+//step number 1
+const retroContainer = document.getElementById('retro-container');
 
-const searchPost = (data) => {
-   console.log(data);
 
-   // create a div
-   const card = document.createElement('div');
-   card.classList = "card w-96 bg-base-100 shadow-xl image-full";
+    posts.forEach(post => {
+        console.log(post);
+        //create a div step number 2
+        const retroCard = document.createElement('div');
+      //   retroCard.classList = `ml-0 shadow-lg p-5 w-96 `;
+     retroCard.className = "ml-0 shadow-lg p-8 w-[600px] bg-gray space-y-8 rounded-xl";
 
-   card.innerHTML = `
-     
-   `;
+      //   step  number 3 
+        retroCard.innerHTML = `
+        <div class="card-body">
+    <h2 class="card-title">Card title!</h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+      `;
 
-   // append card inside banner-section
-   bannerSection.appendChild(card);
+//step number 4
+retroContainer.appendChild(retroCard);
+
+    })
+
 }
 
-loadData();
+retroForm();
+
+
+
