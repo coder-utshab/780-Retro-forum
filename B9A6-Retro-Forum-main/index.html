@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,8 @@
     class="text-white p-12 rounded-3xl min-h-[500px] 
            flex justify-between items-center 
            bg-cover bg-center"
-    style="background-image: url('./images/bgbanner.png');"
+   style="background-image: url('./images/bgbanner.png');"
+    
   >
 
     <div>
@@ -57,39 +58,94 @@
 
 
 
-<!-- <section class="max-w-7xl mx-auto mt-10">
-  <div class="bg-[#0F172A] text-white p-12 rounded-3xl min-h-[500px] flex justify-between items-center">
 
-    <div>
-      <h1 class="text-6xl font-bold mb-5">
-        Welcome to the <br>
-        <span class="text-purple-400">ReTro</span> Forum
-      </h1>
-
-      <p class="mb-8 text-gray-300">
-        Share your favorite opinion and win and wp forum coffee mug!
-      </p>
-
-      <div class="flex">
-        <input class="px-4 py-2 rounded-l-full text-black" 
-               type="text" 
-               placeholder="Search here anything">
-        <button class="bg-purple-500 px-6 rounded-r-full">
-          Search
-        </button>
-      </div>
-    </div>
-
-    <div class="bg-white text-black p-8 rounded-2xl">
-      <p>Registered Users 01</p>
-      <p>Forum 05</p>
-      <p>Topics 01</p>
-      <p>Replies 01</p>
-    </div>
-
-  </div>
-</section> -->
 
     <script src="js/retro.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro-Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<section class="max-w-7xl mx-auto mt-10 px-4">
+    <nav class="flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-black">ReTro</h1>
+        <button class="btn bg-purple-500 text-black text-4xl border-none font-bold">
+            Sign In
+        </button>
+    </nav>
+</section>
+
+
+<!-- Banner Section -->
+<section class="max-w-7xl mx-auto mt-10 px-4">
+    <div 
+        class="rounded-3xl min-h-[650px] 
+               flex flex-col md:flex-row 
+               justify-between items-center 
+               p-12 text-white 
+               bg-cover bg-center"
+               style="background-image: linear-gradient(rgba(76, 71, 71, 0.7), rgba(39, 30, 30, 0.7)), url('images/bgbanner.png');"      
+    >
+
+        <!-- Left Content -->
+        <div class="mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-6xl font-bold mb-5">
+                Welcome to the <br>
+                <span class="text-purple-400">ReTro</span> Forum
+            </h1>
+
+            <p class="mb-8 text-gray-300 max-w-md">
+                Share your favorite opinion and win our forum coffee mug!
+            </p>
+
+            <div class="flex">
+                <input 
+                    class="px-4 py-3 rounded-l-full text-black w-full md:w-80 outline-none"
+                    type="text"
+                    placeholder="Search here anything"
+                >
+                <button class="bg-purple-500 px-6 rounded-r-full">
+                    Search
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Card -->
+        <div class="bg-white text-black font-bold p-8 rounded-3xl shadow-xl w-72">
+            <p class="mb-2 font-semibold">Registered Users: 01</p>
+            <p class="mb-2 font-semibold">Forum: 05</p>
+            <p class="mb-2 font-semibold">Topics: 01</p>
+            <p class="font-semibold">Replies: 01</p>
+        </div>
+
+    </div>
+</section>
+
+
+<br>
+
+<section class="text-5xl text-black font-bold text-center mt-24">
+    <h1>Let's Discuss</h1>
+    <p class="text-2xl font-normal mt-8">
+        Yes, tou can run unit tests and view the results directly within the app. The<br>
+    Integrated testing features allw for a streamlined</p>
+</section>
+
+<script src="js/retro.js"></script>
 </body>
 </html>
