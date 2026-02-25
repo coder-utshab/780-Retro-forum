@@ -19,7 +19,7 @@ const retroContainer = document.getElementById('retro-container');
 
       //   step  number 3 
        retroCard.innerHTML = `
-       <figure><img src=" ${post.image}" alt="${post.author}" /></figure>
+       <figure><img src=" ${posts.image}" alt="${posts.author}" /></figure>
    <div class="card-body">
     <h2 class="card-title">Card title!</h2>
     <p>${post.description}</p>
