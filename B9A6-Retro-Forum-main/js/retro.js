@@ -19,9 +19,10 @@ const retroContainer = document.getElementById('retro-container');
 
       //   step  number 3 
        retroCard.innerHTML = `
+       <figure><img src=" ${post.image}" alt="${post.author}" /></figure>
    <div class="card-body">
     <h2 class="card-title">Card title!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>${post.description}</p>
     <div class="card-actions justify-end">
       <button class="btn btn-primary">Buy Now</button>
     </div>
