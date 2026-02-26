@@ -1,5 +1,4 @@
 
-
 const retroForm = async () => {
     try {
         const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
@@ -21,7 +20,7 @@ const displayRetro = (posts) => {
 
         retroCard.innerHTML = `
             <figure class="w-24 h-24 mr-4">
-                <img src="${post.image}"/>
+                <img src="${post.image}" alt="Post Image" class="w-full h-full object-cover rounded-full" />
             </figure>
             <div class="flex flex-col">
                 <h2 class="text-xl font-bold mb-1">${post.title}</h2>
