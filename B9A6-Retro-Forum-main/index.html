@@ -11,95 +11,95 @@
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
 
-<!-- Navbar -->
-<main>
-    <section class="max-w-7xl mx-auto mt-10 px-4">
-    <nav class="flex justify-between items-center">
-        <img src="./images/logo.png" alt="Post Image">
-        <button class="btn bg-purple-200 text-black text-2xl border-none font-bold">
+<body class="bg-gray-100 overflow-x-hidden">
+
+<main class="w-full">
+
+<!-- navar section -->
+<section class="max-w-7xl mx-auto mt-6 md:mt-10 px-4">
+    <nav class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <img class="w-40 sm:w-48" src="./images/logo.png" alt="Logo">
+        <button class="btn bg-purple-200 text-black text-lg md:text-2xl border-none font-bold px-6">
             Sign In
         </button>
     </nav>
 </section>
 
 
-<!-- Banner Section -->
-<section class="max-w-7xl mx-auto mt-10 px-4">
+<!-- banner section -->
+<section class="max-w-7xl mx-auto mt-8 md:mt-10 px-4">
     <div 
-        class="rounded-3xl min-h-[650px] 
-               flex flex-col md:flex-row 
+        class="rounded-3xl min-h-[500px] md:min-h-[650px]
+               flex flex-col lg:flex-row 
                justify-between items-center 
-               p-12 text-white 
+               gap-10
+               p-6 md:p-12 text-white 
                bg-cover bg-center"
-               style="background-image: linear-gradient(rgba(76, 71, 71, 0.7), rgba(39, 30, 30, 0.7)), url('images/bgbanner.png');"      
+        style="background-image: linear-gradient(rgba(76,71,71,0.7), rgba(39,30,30,0.7)), url('images/bgbanner.png');"
     >
 
-        <!-- Left Content -->
-        <div class="mb-10 md:mb-0">
-            <h1 class="text-4xl md:text-6xl font-bold mb-5">
+        <!-- Left -->
+        <div class="text-center lg:text-left">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
                 Welcome to the <br>
                 <span class="text-purple-400">ReTro</span> Forum
             </h1>
 
-            <p class="mb-8 text-gray-300 max-w-md">
+            <p class="mb-8 text-gray-300 max-w-md mx-auto lg:mx-0">
                 Share your favorite opinion and win our forum coffee mug!
             </p>
 
-            <div class="flex">
+            <div class="flex flex-col sm:flex-row w-full sm:w-auto">
                 <input 
-                    class="px-4 py-3 rounded-l-full text-black w-full md:w-80 outline-none"
+                    class="px-4 py-3 rounded-full sm:rounded-l-full sm:rounded-r-none text-black w-full sm:w-80 outline-none"
                     type="text"
                     placeholder="Search here anything"
                 >
-                <button class="bg-purple-500 px-6 rounded-r-full">
+                <button class="bg-purple-500 px-6 py-3 rounded-full sm:rounded-r-full sm:rounded-l-none mt-3 sm:mt-0">
                     Search
                 </button>
             </div>
         </div>
 
-        <!-- Right Card -->
-        <div class="bg-white text-black font-bold p-8 rounded-3xl shadow-xl w-72">
-            <p class="mb-2 font-semibold">Registered Users: 01</p>
-            <p class="mb-2 font-semibold">Forum: 05</p>
-            <p class="mb-2 font-semibold">Topics: 01</p>
-            <p class="font-semibold">Replies: 01</p>
+        <!-- Right Stats Card -->
+        <div class="bg-white text-black font-bold p-6 md:p-8 rounded-3xl shadow-xl w-full sm:w-80 text-center lg:text-left">
+            <p class="mb-2">Registered Users: 01</p>
+            <p class="mb-2">Forum: 05</p>
+            <p class="mb-2">Topics: 01</p>
+            <p>Replies: 01</p>
         </div>
 
     </div>
 </section>
 
 
-<br>
 
-<section class="text-5xl text-black font-bold text-center mt-24">
+<!-- lets discuss section -->
+<section class="text-3xl sm:text-4xl md:text-5xl text-black font-bold text-center mt-16 md:mt-24 px-4">
     <h1>Let's Discuss</h1>
-    <p class="text-2xl font-normal mt-8">
-        Yes, you can run unit tests and view the results directly within the app. The<br>
-    Integrated testing features allow for a streamlined process.
+    <p class="text-lg sm:text-xl font-normal mt-6 max-w-3xl mx-auto">
+        Yes, you can run unit tests and view the results directly within the app.
+        Integrated testing features allow for a streamlined.
     </p>
 </section>
 
 
-<!-- lets discuss section -->
 <section class="max-w-7xl mx-auto mt-10 px-4">
-    
-    <!-- Parent Flex Container -->
     <div class="flex flex-col lg:flex-row gap-10">
 
-        <!-- Left Side (Posts) -->
-        <div id="retro-container" class="flex-1 space-y-10"></div>
+        <!-- Posts -->
+        <div id="retro-container" class="flex-1 space-y-8"></div>
 
-        <!-- Right Side (FAQ) -->
-        <div class="flex-1 h-24 w-20">
+        <!-- FAQ -->
+        <div class="flex-1 bg-white p-4 rounded-xl shadow-md h-fit">
             <div class="collapse collapse-arrow border border-base-300 mb-4">
                 <input type="radio" name="my-accordion-4" checked />
                 <div class="collapse-title font-semibold">
                     How do I create an account?
                 </div>
                 <div class="collapse-content text-sm">
-                    Click the "Sign Up" button in the top right corner and follow the registration process.
+                    Click the "Sign Up" button in the top right corner.
                 </div>
             </div>
 
@@ -109,7 +109,7 @@
                     I forgot my password. What should I do?
                 </div>
                 <div class="collapse-content text-sm">
-                    Click on "Forgot Password" on the login page and follow the instructions sent to your email.
+                    Click on "Forgot Password" and follow instructions.
                 </div>
             </div>
 
@@ -119,48 +119,46 @@
                     How do I update my profile information?
                 </div>
                 <div class="collapse-content text-sm">
-                    Go to "My Account" settings and select "Edit Profile" to make changes.
+                    Go to "My Account" → Edit Profile.
                 </div>
             </div>
         </div>
 
     </div>
-
 </section>
 
 
 
-<section class="max-w-7xl mx-auto mt-24 px-4">
+<!-- join our forum section -->
+<section class="max-w-7xl mx-auto mt-16 md:mt-24 px-4">
     <div 
-        class="rounded-3xl min-h-[550px] 
-               flex flex-col md:flex-row 
+        class="rounded-3xl min-h-[400px] md:min-h-[550px]
+               flex flex-col lg:flex-row 
                justify-between items-center 
-               p-12 text-white 
+               gap-10
+               p-6 md:p-12 text-white 
                bg-cover bg-center"
-               style="background-image: linear-gradient(rgba(76, 71, 71, 0.7), rgba(39, 30, 30, 0.7)), url('images/bgbanner.png');"      
+        style="background-image: linear-gradient(rgba(76,71,71,0.7), rgba(39,30,30,0.7)), url('images/bgbanner.png');"
     >
 
-        <!-- Left Content -->
-        <div class="mb-10 md:mb-0">
-            <h1 class="text-4xl md:text-6xl font-bold mb-5">
-                Join Our Forum</h1>
+        <div class="text-center lg:text-left">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
+                Join Our Forum
+            </h1>
 
-            <p class="mb-8 text-gray-300 max-w-md">
-                share your favorite opinion and win and wp forum mug! you ca <br>
-                run unit tests and view the results directly within the app.
+            <p class="mb-8 text-gray-300 max-w-md mx-auto lg:mx-0">
+               Share your favorite opinion and win wp forum coffee mug! Yes, you can<br>
+               run unit tests and view the results directly within the app.
+
             </p>
 
-            <div class="flex">
-                <button class="btn btn-wide bg-purple-400 rounded-xl">Register Now</button>
-                <!-- <button class="bg-purple-500 px-6 rounded-r-full">
-                    Register no
-                </button> -->
-            </div>
+            <button class="btn btn-wide bg-purple-400 rounded-xl">
+                Register Now
+            </button>
         </div>
 
-        <!-- Right Card -->
-        <div class="">
-            <img src="./images/joinforum.png">
+        <div>
+            <img class="w-64 sm:w-80 mx-auto" src="./images/joinforum.png" alt="">
         </div>
 
     </div>
@@ -168,20 +166,14 @@
 
 
 
-
-
-<!-- letest post section -->
- <section class="text-5xl text-black font-bold text-center mt-24">
-    <h1>Latest posts</h1>
-    <p class="text-2xl font-normal mt-8">
-        Yes you can run unit tests and view the results directly within the app. The<br>
-        integrated testing features allw for a streamlined.
+<!-- ================= LATEST POSTS ================= -->
+<section class="text-3xl sm:text-4xl md:text-5xl text-black font-bold text-center mt-16 md:mt-24 px-4">
+    <h1>Latest Posts</h1>
+    <p class="text-lg sm:text-xl font-normal mt-6 max-w-3xl mx-auto">
+        Yes, you can run unit tests and view the results directly within the app. The<br>
+               integrated testing features allow for a streamlined.
     </p>
 </section>
-
-
-
-<!-- latest post  card -->
 
 </main>
 

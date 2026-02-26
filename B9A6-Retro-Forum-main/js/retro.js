@@ -1,15 +1,8 @@
-
 const retroForm = async () => {
-    try {
-        const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
-        const data = await res.json();
-
-        displayRetro(data.posts); 
-    } catch (error) {
-        console.error("Failed to fetch posts:", error);
-    }
+  const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+  const data = await res.json();
+  displayRetro(data.posts); 
 }
-
 const displayRetro = (posts) => {
     const retroContainer = document.getElementById('retro-container');
 
