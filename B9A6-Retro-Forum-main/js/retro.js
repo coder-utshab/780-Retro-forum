@@ -1,45 +1,41 @@
-const retroForm = async () => {
-    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
-    const data = await res.json();
 
-    displayRetro(data.posts); 
+
+const retroForm = async () => {
+    try {
+        const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+        const data = await res.json();
+
+        displayRetro(data.posts); 
+    } catch (error) {
+        console.error("Failed to fetch posts:", error);
+    }
 }
 
 const displayRetro = (posts) => {
-//step number 1
-const retroContainer = document.getElementById('retro-container');
-
+    const retroContainer = document.getElementById('retro-container');
 
     posts.forEach(post => {
-        console.log(post);
-        //create a div step number 2
+        // Create card container
         const retroCard = document.createElement('div');
-      //   retroCard.classList = `ml-0 shadow-lg p-5 w-96 `;
-     retroCard.className = "ml-0 shadow-lg p-8 w-[600px] bg-gray-200 space-y-8 rounded-2xl";
+        retroCard.className = "flex bg-white shadow-md rounded-lg p-4 w-full max-w-2xl";
 
-      //   step  number 3 
-       retroCard.innerHTML = `
-     <div class="card-body">
-     <figure><img src =" ${AuthenticatorAssertionResponse.image}"></figure>
-    <h2>${post.category}</h2>
-    <p>${post.description}</p>
-    <span>${post.isActive}</span>
-    <span>${post.title}</span>
-    <span>${post.comment_count}</span>
-    <span>${post.id}</span>
-    </div>
-  </div>
+        retroCard.innerHTML = `
+            <figure class="w-24 h-24 mr-4">
+                <img src="${post.image}"/>
+            </figure>
+            <div class="flex flex-col">
+                <h2 class="text-xl font-bold mb-1">${post.title}</h2>
+                <p class="text-gray-700 mb-2">${post.description}</p>
+                <div class="flex flex-wrap space-x-2 text-sm text-gray-500 mt-auto">
+                    <span>Category: ${post.category}</span>
+                    <span>Comments: ${post.comment_count}</span>
+                </div>
+            </div>
+        `;
 
-`;
-
-//step number 4
-retroContainer.appendChild(retroCard);
-
-    })
-
+        retroContainer.appendChild(retroCard);
+    });
 }
 
 retroForm();
-
-
 
